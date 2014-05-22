@@ -1,0 +1,11 @@
+*** Settings ***
+Library    Selenium2Library
+
+*** Variables ***
+${URL}    http://www.tarad.com/
+
+*** Testcases ***
+Select value in drop down list
+	Open Browser    ${URL}
+	
+*** Keywords ***
