@@ -8,7 +8,8 @@ Library    Selenium2Library
 *** Testcases ***
 Shopping in Tarad
     Open Browser    http://www.tarad.com/product/5849607    
-    Wait Until Page Contains    DIESEL    5   
+    Maximize Browser Window 
+    Wait Until Page Contains    DIESEL    10 
 	Click Element    product_qty
 	Select From List By Value     product_qty    2
 
@@ -17,7 +18,13 @@ Shopping in Tarad
 	Wait Until Element Is Visible    btn-payment     5
 	Click Element    btn-payment
 
+	Wait Until Page Contains    login    5  
+	Unselect Checkbox   check_guest_register
+	Click Element    xpath=//fieldset/div[4]/button[@class="btn btn-large btn-danger"]
 
+	Click Element    bill-payment
+	
+	
     #Input Text    score    80
     #Click Button   convert
     #Wait Until Page Contains    A

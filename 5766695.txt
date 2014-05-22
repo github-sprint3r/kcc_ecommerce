@@ -1,0 +1,20 @@
+*** Settings ***
+Library      Selenium2Library
+Library 	 OperatingSystem
+
+*** Variables ***
+${DEMO URL}    http://www.tarad.com/product/5766695
+
+*** Testcases ***
+Buy Dress
+    Go to product page
+    Select Radio Button    option_id    140721
+    Select From List    product_qty    1
+    Click Button    f_buy
+    Wait Until Page Contains    btn-payment    60
+    Click Button    btn-payment    30
+  
+*** Keywords ***
+Go to product page
+    Open Browser    ${DEMO URL}    chrome
+    Maximize Browser Window
