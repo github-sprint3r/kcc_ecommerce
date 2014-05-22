@@ -15,5 +15,13 @@ Buy product Bikinii BoomZ - 5877164
 	Wait Until Element Is Visible    check_guest_register
 	Unselect Checkbox    check_guest_register
 	Click Element    xpath=//fieldset/div[4]/button[@class="btn btn-large btn-danger"]
-
+	Wait Until Element Is Visible    paysbuy
+	Click Element    paysbuy
+	Click Element    next-btn
+	Wait Until Element Is Visible    send_firstname
+	Input Text    send_firstname    BB
+	Input Text    send_lastname    Text
+	Input Text    send_address    77 Silom rd.,
+	Select From List By Value    send_country   TH
+	Select From List By Value    send_province    2
 *** Keywords ***
