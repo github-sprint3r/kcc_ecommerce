@@ -15,4 +15,7 @@ Buy product code 5723441
 	Click Element    f_buy
 	Wait Until Page Contains Element    btn-payment    30
 	Click Element    btn-payment
+	Unselect Checkbox    check_guest_register
+	Click Element    xpath=//fieldset/div[4]/button[@class="btn btn-large btn-danger"]
+	Click Element    xpath=//*[@id="credit-card"]/a
 *** Keywords ***
