@@ -4,11 +4,16 @@ Library     OperatingSystem
 
 
 *** Variables ***
-${URL}    http://www.tarad.com/
+${URL}    http://www.tarad.com/product/5984851
 
 
 *** Testcases ***
 Transction
-	Open Browser    ${URL}
+	
+	Open Browser    ${URL}  
 	Maximize Browser Window
 
+	Select From List By Value   product_qty    4
+	Click Button    f_buy
+	Wait Until Element Is Visible    btn-payment    5
+	Click Element    btn-payment 
