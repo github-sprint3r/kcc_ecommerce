@@ -1,0 +1,16 @@
+*** Settings ***
+Library      Selenium2Library
+Library 	 OperatingSystem
+
+*** Variables ***
+${DEMO URL}    http://www.tarad.com/product/5766695
+
+*** Testcases ***
+Buy Dress
+    Go to product page  
+  
+*** Keywords ***
+Go to product page
+    Open Browser    ${DEMO URL}    chrome
+    Maximize Browser Window
+    
