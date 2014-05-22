@@ -4,14 +4,14 @@ Library    OperatingSystem
 
 
 *** Variables ***
-${DEMO URL}    http://www.tarad.com/product/5723441
+${DEMO URL}    http://www.tarad.com/product/5262643
 
 
 *** Testcases ***
-Buy product code 5723441
+Buy product code 5262643
 	Open Browser    ${DEMO URL}
 	Maximize Browser Window
-	Select From List By Value    product_qty    6
+	Select From List By Value    product_qty    7
 	Click Element    f_buy
 	Wait Until Page Contains Element    btn-payment    30
 	Click Element    btn-payment

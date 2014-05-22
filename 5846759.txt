@@ -1,0 +1,17 @@
+*** Settings ***
+Library    Selenium2Library
+
+*** Variables ***
+
+
+*** Testcases ***
+Test guest buying front car camera 5 pieces by mPay
+	Open Browser    http://www.tarad.com/product/5846759
+	Maximize Browser Window        
+	Select From List By Value    product_qty    5
+	Click Button    f_buy	
+	Wait Until Page Contains Element    cart
+	Click Button    btn-payment
+	
+	
+*** Keywords ***
