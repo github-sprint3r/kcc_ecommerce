@@ -9,7 +9,7 @@ Library    Selenium2Library
 Shopping in Tarad
     Open Browser    http://www.tarad.com/product/5849607    
     Maximize Browser Window 
-    Wait Until Page Contains    DIESEL    5 
+    Wait Until Page Contains    DIESEL    10 
 	Click Element    product_qty
 	Select From List By Value     product_qty    2
 
@@ -22,7 +22,7 @@ Shopping in Tarad
 	Unselect Checkbox   check_guest_register
 	Click Element    xpath=//fieldset/div[4]/button[@class="btn btn-large btn-danger"]
 
-
+	Click Element    bill-payment
 	
 	
     #Input Text    score    80
