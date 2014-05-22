@@ -1,0 +1,14 @@
+*** Settings ***
+Library		Selenium2Library
+Library     OperatingSystem
+
+
+*** Variables ***
+${URL}    http://www.tarad.com/
+
+
+*** Testcases ***
+Transction
+	Open Browser    ${URL}
+	Maximize Browser Window
+

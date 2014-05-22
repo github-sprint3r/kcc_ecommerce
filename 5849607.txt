@@ -1,0 +1,28 @@
+*** Settings ***
+Library    Selenium2Library
+
+
+*** Variables ***
+
+
+*** Testcases ***
+Shopping in Tarad
+    Open Browser    http://www.tarad.com/product/5849607    
+    Wait Until Page Contains    DIESEL    5   
+	Click Element    product_qty
+	Select From List By Value     product_qty    2
+
+	Click Button    f_buy
+
+	Wait Until Element Is Visible    btn-payment     5
+	Click Element    btn-payment
+
+
+    #Input Text    score    80
+    #Click Button   convert
+    #Wait Until Page Contains    A
+    #Close Browser
+
+
+
+*** Keywords ***

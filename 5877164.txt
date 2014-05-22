@@ -1,0 +1,16 @@
+*** Settings ***
+Library    Selenium2Library
+
+*** Variables ***
+${Prod_URL}    http://www.tarad.com/product/5877164
+
+*** Testcases ***
+Buy product Bikinii BoomZ - 5877164
+	Open Browser    ${Prod_URL}
+	Maximize Browser Window
+	Select From List By Value    product_qty    3
+	Click Button    f_buy
+	Wait Until Element Is Visible    btn-payment
+	Click Element    btn-payment
+
+*** Keywords ***
