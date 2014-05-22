@@ -1,0 +1,21 @@
+*** Settings ***
+Library    Selenium2Library
+Library    OperatingSystem
+
+
+*** Variables ***
+${DEMO URL}    http://www.tarad.com/product/5262643
+
+
+*** Testcases ***
+Buy product code 5262643
+	Open Browser    ${DEMO URL}
+	Maximize Browser Window
+	Select From List By Value    product_qty    7
+	Click Element    f_buy
+	Wait Until Page Contains Element    btn-payment    30
+	Click Element    btn-payment
+	Unselect Checkbox    check_guest_register
+	Click Element    xpath=//fieldset/div[4]/button[@class="btn btn-large btn-danger"]
+	Click Element    xpath=//*[@id="credit-card"]/a
+*** Keywords ***
