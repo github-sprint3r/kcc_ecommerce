@@ -12,5 +12,8 @@ Buy product Bikinii BoomZ - 5877164
 	Click Button    f_buy
 	Wait Until Element Is Visible    btn-payment
 	Click Element    btn-payment
+	Wait Until Element Is Visible    check_guest_register
+	Unselect Checkbox    check_guest_register
+	Click Element    xpath=//fieldset/div[4]/button[@class="btn btn-large btn-danger"]
 
 *** Keywords ***
