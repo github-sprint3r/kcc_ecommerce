@@ -3,18 +3,29 @@ Library      Selenium2Library
 Library 	 OperatingSystem
 
 *** Variables ***
-${DEMO URL}    http://www.tarad.com/product/5766695
+${PROD URL}    http://www.tarad.com/product/5766695
 
 *** Testcases ***
-Buy Dress
+Buy Dress Tarad.com
     Go to product page
+    Wait Until Page Contains    option_id
     Select Radio Button    option_id    140721
     Select From List    product_qty    1
     Click Button    f_buy
-    Wait Until Page Contains    btn-payment    60
-    Click Button    btn-payment    30
+    Wait Until Element Is Visible    btn-payment    60
+    Click Element    btn-payment
+    Wait Until Page Contains    login    30  
+    Unselect Checkbox    check_guest_register
+    Click Element    xpath=//fieldset/div[4]/button[@class='btn btn-large btn-danger']
+    Wait Until Element Is Visible    counter-service    30
+    Select From List    product_qty_5766695_140721    1
+    Click Element    counter-service
+    Wait Until Element Is Visible    next-btn
+    Click Element     next-btn
+
+
   
 *** Keywords ***
 Go to product page
-    Open Browser    ${DEMO URL}    chrome
+    Open Browser    ${PROD URL}    chrome
     Maximize Browser Window
